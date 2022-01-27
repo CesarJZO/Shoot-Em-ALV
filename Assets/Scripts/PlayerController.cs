@@ -23,11 +23,8 @@ public class PlayerController : MonoBehaviour
     }
     public void OnFire()
     {
-        Vector3 position = new Vector3(
-            _shooterPoint.position.x,
-            _shooterPoint.position.y
-        );
-        Instantiate(_bulletPrefab, position, Quaternion.identity);
+        GameObject clone = Instantiate(_bulletPrefab, _shooterPoint.position, Quaternion.identity);
+        clone.AddComponent<Projectile>();
     }
 }
 
