@@ -2,61 +2,42 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float speed = 5;
-    public Boundary boundary;
-    Gamepad gamepad = Gamepad.current;
-    void Start()
-    {
-        if (gamepad == null)
-            Debug.Log("You need a controller!");
-    }
+    [Header("Properties")]
+    [SerializeField] float _speed = 5;
+    [Header("References")]
+    [SerializeField] GameObject _bulletPrefab;
+    [SerializeField] Transform _shooterPoint;
+    [SerializeField] InputActionReference _moveAction;
+    [SerializeField] Boundary _boundary;
 
     void Update()
     {
-        if (gamepad != null)
-        {
-            Vector2 direction = gamepad.leftStick.ReadValue() * speed * Time.deltaTime;
-            transform.Translate(direction.x, direction.y, 0);
+        transform.Translate(_speed * Time.deltaTime * _moveAction.action.ReadValue<Vector2>());
 
-            // Delimiting the playing area
-            transform.position = new Vector3(
-                Mathf.Clamp(transform.position.x, boundary.MinX, boundary.MaxX),
-                Mathf.Clamp(transform.position.y, boundary.MinY, boundary.MaxY)
-            );
-        }
+        // Delimiting the playing area
+        transform.position = new Vector3(
+            Mathf.Clamp(transform.position.x, _boundary.MinX, _boundary.MaxX),
+            Mathf.Clamp(transform.position.y, _boundary.MinY, _boundary.MaxY)
+        );
+            
+    }
+    public void OnFire()
+    {
+        Vector3 position = new Vector3(
+            _shooterPoint.position.x,
+            _shooterPoint.position.y
+        );
+        Instantiate(_bulletPrefab, position, Quaternion.identity);
     }
 }
 
-[System.Serializable] public class Boundary
+[System.Serializable]
+public class Boundary
 {
-    [SerializeField] private float _horizontal;
-    [SerializeField] private float _vertical;
-    public float MaxX
-    {
-        get
-        {
-            return _horizontal / 2;
-        }
-    }
-    public float MaxY
-    {
-        get
-        {
-            return _vertical / 2;
-        }
-    }
-    public float MinY
-    {
-        get
-        {
-            return _vertical / -2;
-        }
-    }
-    public float MinX
-    {
-        get
-        {
-            return _horizontal / -2;
-        }
-    }
+    [SerializeField] private float _width;
+    [SerializeField] private float _height;
+    public float MaxX => _width / 2;
+    public float MaxY => _height / 2;
+    public float MinY => _height / -2;
+    public float MinX => _width / -2;
 }
