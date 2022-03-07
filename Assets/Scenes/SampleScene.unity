@@ -386,7 +386,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 4701415153487918327, guid: bc62b7ebf6bc9ecc29fd8758bf1b4f10, type: 3}
   spawnReference: {fileID: 347375282}
-  amountToSpawn: 12
+  amountToSpawn: 100
+  spawnCadence: 0.2
+  initialTime: 0.5
 --- !u!4 &347375282
 Transform:
   m_ObjectHideFlags: 0
@@ -849,7 +851,7 @@ GameObject:
   - component: {fileID: 1249977037}
   m_Layer: 0
   m_Name: Top Limit
-  m_TagString: Untagged
+  m_TagString: Limit
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -925,7 +927,7 @@ GameObject:
   - component: {fileID: 1709558046}
   m_Layer: 0
   m_Name: Bottom Limit
-  m_TagString: Untagged
+  m_TagString: Limit
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -976,7 +978,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709558045}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -8, z: -4}
+  m_LocalPosition: {x: 0, y: -10, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

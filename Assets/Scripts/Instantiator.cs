@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Instantiator : MonoBehaviour
 {
-    public void Instantiate(GameObject obj)
+    [SerializeField] GameObject _object;
+    public void InstantiateObject()
     {
-        Instantiate(obj);
+        Instantiate(_object, transform.position, Quaternion.identity);
     }
 }
