@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class EnemyDrone : MonoBehaviour
 {
-    [SerializeField] float _speed = 1;
+    [HideInInspector]
+    public EnemyConfig config; 
+    float _speed;
     void Start()
     {
+        _speed = config.speed;
         GetComponent<Rigidbody2D>().velocity = Vector2.down * _speed;
+        if (config.sprite != null)
+            GetComponentInChildren<SpriteRenderer>().sprite = config.sprite;
     }
 }

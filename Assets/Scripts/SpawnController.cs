@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class SpawnController : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    public List<GameObject> enemyPrefabs;
+    [SerializeField] List<EnemyConfig> enemyConfigs;
     public Transform spawnReference;
     public int amountToSpawn;
     public float spawnCadence = 1;
     public float initialTime = 0.5f;
 
-    void Start()
+    void OnEnable()
     {
         StartCoroutine(SpawnEnemies());
     }
@@ -25,6 +26,9 @@ public class SpawnController : MonoBehaviour
     }
     public void SpawnEnemy(Vector3 position)
     {
-        Instantiate(enemyPrefab, position, Quaternion.identity);
+        int randomIndex = Random.Range(0, enemyPrefabs.Count);
+        GameObject enemy = Instantiate(enemyPrefabs[randomIndex], position, Quaternion.identity);
+        randomIndex = Random.Range(0, enemyConfigs.Count);
+        enemy.GetComponent<EnemyDrone>().config = enemyConfigs[randomIndex];
     }
 }

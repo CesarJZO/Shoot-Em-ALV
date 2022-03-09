@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8628034388836142187}
   - component: {fileID: 5032104917210242215}
   m_Layer: 6
-  m_Name: EnemyDronePurple
+  m_Name: EnemyDrone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
