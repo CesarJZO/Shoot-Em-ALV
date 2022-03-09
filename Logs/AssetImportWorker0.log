@@ -1179,3 +1179,80 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 362.678212 seconds.
+  path: Assets/Scripts/Entities
+  artifactKey: Guid(f5d617a35244d3c718ffd10474e9fef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Entities using Guid(f5d617a35244d3c718ffd10474e9fef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c35c3aea8d13d3f2cf2103dac5800c5f') in 0.009425 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005328 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Refreshing native plugins compatible for Editor in 1.33 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.285 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2287ms)
+		BeginReloadAssembly (257ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (17ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (98ms)
+		EndReloadAssembly (1777ms)
+			LoadAssemblies (128ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (496ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (94ms)
+			SetupLoadedEditorAssemblies (937ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (37ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (100ms)
+				ProcessInitializeOnLoadAttributes (725ms)
+				ProcessInitializeOnLoadMethodAttributes (61ms)
+				AfterProcessingInitializeOnLoad (11ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.06 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2609 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 19 unused Assets / (22.1 KB). Loaded Objects now: 3150.
+Memory consumption went from 114.5 MB to 114.5 MB.
+Total: 12.358258 ms (FindLiveObjects: 0.491255 ms CreateObjectMapping: 0.331594 ms MarkObjects: 11.484260 ms  DeleteObjects: 0.047373 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 101.455216 seconds.
+  path: Assets/Scripts/Systems
+  artifactKey: Guid(ff26e482660d02745b09cbba96077266) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Systems using Guid(ff26e482660d02745b09cbba96077266) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e6baa47e524d254ee357c6f98efbe8d') in 0.010139 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.167686 seconds.
+  path: Assets/Scripts/AsteroidGenerator.cs
+  artifactKey: Guid(548ec41df082e124ca747b59b7f31799) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/AsteroidGenerator.cs using Guid(548ec41df082e124ca747b59b7f31799) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d3c9d79309b8d831c91ad20183761ec') in 0.002065 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.225994 seconds.
+  path: Assets/Scripts/BackgroundScroller.cs
+  artifactKey: Guid(14aebbfcf5c18a944a9bab772859c9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/BackgroundScroller.cs using Guid(14aebbfcf5c18a944a9bab772859c9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6c2cc0750a5df73fe57e80e63ae5db4') in 0.002269 seconds 
